@@ -5,9 +5,10 @@ library(dplyr)
 ```
 ```{r}
 marketdata <- read.csv("~/GitHub/RPractice/Market Data - Sheet1.csv")
-cheaper <- marketdata %>% filter(Low.Price < 1000)
+cheaper <- marketdata %>% filter(Low.Price < 10000) %>% arrange(Quant..for.sale)
 sortmarketdata <- marketdata %>% arrange(desc(Real.Item.Key))
-sortmarketdata
+
 marketdata
 cheaper
+sortmarketdata
 ```
